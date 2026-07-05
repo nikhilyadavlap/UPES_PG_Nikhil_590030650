@@ -332,6 +332,7 @@ Install
 ```
 
 Wait for the installation to complete.
+
 ![e12e733303409fb7100e1cd4aeb7d6b6.png](../_resources/e12e733303409fb7100e1cd4aeb7d6b6.png)
 ---
 
@@ -345,6 +346,83 @@ Finish
 
 ![85000f8f0d90f55f920231ec2c9b0fd8.png](../_resources/85000f8f0d90f55f920231ec2c9b0fd8.png)
 ---
+
+
+# Create Your Own GitHub Repository from the UPES_PG_Template
+
+## Objective
+
+The purpose of this exercise is to create your own personal GitHub repository using the provided **UPES_PG_Template** repository as a starting point.
+
+At the end of this activity, every student will have:
+
+- A personal GitHub repository
+- A local working copy on their laptop
+- A customized academic portfolio
+- A repository connected to their own GitHub account
+
+---
+
+# Workflow Overview
+
+```text
+                    Instructor
+
+                UPES_PG_Template
+                        │
+                        │ Clone
+                        ▼
+              Student Local Computer
+                        │
+         Change Remote Repository (origin)
+                        │
+                        ▼
+      Student Personal GitHub Repository
+```
+
+---
+
+# Step 1: Create a New Repository on GitHub
+
+Login to GitHub.
+
+Click
+
+```text
+New Repository
+```
+![30cdfbdac3c19c06b4f82d3cd8b8abdb.png](../_resources/30cdfbdac3c19c06b4f82d3cd8b8abdb.png)
+
+Repository Name (Example)
+
+```text
+UPES_PG_JohnDoe
+```
+
+Repository Visibility
+
+```text
+Public
+```
+
+Do **NOT** select:
+
+- Add a README
+- Add a .gitignore
+- Choose a License
+
+Your repository should be completely empty.
+
+Click
+
+```text
+Create Repository
+```
+
+![a344cb2c79fa8e0a83d75860c25ccc20.png](../_resources/a344cb2c79fa8e0a83d75860c25ccc20.png)
+---
+
+# Step 2: Initalise Git and Clone the UPES_PG_Template Repository
 
 # Verify Git Installation
 
@@ -404,47 +482,199 @@ A version number indicates that Git Credential Manager is installed correctly.
 
 ---
 
-# Create Your First Repository
 
-Create a new folder:
+Open **Git Bash** or the **VS Code Terminal**.
 
-```bash
-mkdir MyFirstRepo
-cd MyFirstRepo
-```
+Navigate to the directory where you want to keep your project.
 
-Initialize Git:
+Example:
 
 ```bash
-git init
+cd C:/UPES/Repositories
 ```
 
-Create a README file:
+![646704a221a73ca40376c6bdebdb2891.png](../_resources/646704a221a73ca40376c6bdebdb2891.png)
+Clone the template repository:
 
 ```bash
-echo "# My First Repository" > README.md
+git clone https://github.com/vibhug0077/UPES_PG_Template.git
 ```
 
-Stage the file:
+Move into the project folder:
+
+```bash
+cd UPES_PG_Template
+```
+
+![c2a4977a78bec2444200cf1311eee3e4.png](../_resources/c2a4977a78bec2444200cf1311eee3e4.png)
+---
+
+# Step 3: Verify the Current Remote
+
+Check which GitHub repository is currently connected.
+
+```bash
+git remote -v
+```
+
+Expected output:
+
+```text
+origin  https://github.com/vibhug0077/UPES_PG_Template.git
+origin  https://github.com/vibhug0077/UPES_PG_Template.git
+```
+
+---
+
+# Step 4: Disconnect the Template Repository
+
+Remove the existing remote.
+
+```bash
+git remote remove origin
+```
+
+Verify:
+
+```bash
+git remote -v
+```
+
+No output should be displayed.
+
+---
+
+# Step 5: Connect Your Personal Repository
+
+Replace **YOUR_USERNAME** with your own GitHub username.
+
+```bash
+
+git remote add origin https://github.com/vibhug0077/UPES_PG_50004178.git
+```
+
+Verify:
+
+```bash
+git remote -v
+```
+
+Expected:
+
+```text
+origin  https://github.com/vibhug0077/UPES_PG_50004178.git (fetch)
+origin  https://github.com/vibhug0077/UPES_PG_50004178.git (push)
+
+```
+
+---
+
+# Step 6: Customize Your Repository
+
+Update the README file with your own information.
+
+Example:
+
+```md
+# UPES PG Portfolio
+
+Name: Vibhu Gautam
+
+Programme: M.Tech Computer Science
+
+University: UPES
+```
+
+You may also update:
+
+- Portfolio
+- Projects
+- Research
+- Subjects
+
+---
+
+# Step 7: Save Your Changes
+
+Check the repository status.
+
+```bash
+git status
+```
+
+Stage all changes.
 
 ```bash
 git add .
 ```
 
-Create the first commit:
+Create your first commit.
 
 ```bash
-git commit -m "Initial commit"
+git commit -m "Customized my academic portfolio"
 ```
 
 ---
 
-# Next Steps
+# Step 8: Push to GitHub
 
-After installing Git, students are ready to:
+Ensure your branch is named **main**.
 
-- Create a GitHub account
-- Authenticate using GitHub (browser login)
-- Create their first repository
-- Push code to GitHub
-- Build their academic portfolio using GitHub Pages
+```bash
+git branch -M main
+```
+
+Push your repository.
+
+```bash
+git push -u origin main
+```
+
+If prompted, sign in to GitHub using the browser.
+
+Once authentication is complete, your repository will be uploaded to your personal GitHub account.
+![4a7aa13e9d333fb626b2dd4b00a49c26.png](../_resources/4a7aa13e9d333fb626b2dd4b00a49c26.png)
+---
+
+# Verify Your Repository
+
+Refresh your GitHub page.
+
+You should now see:
+
+- README
+- Subjects
+- Projects
+- Research
+- Portfolio
+- All starter files
+
+---
+![b7599db2ef2c69b476678d3cef4d64d5.png](../_resources/b7599db2ef2c69b476678d3cef4d64d5.png)
+# Final Repository Structure
+
+```text
+UPES_PG_JohnDoe/
+│
+├── Portfolio/
+├── Projects/
+├── Research/
+├── Subjects/
+├── Starter_Page/
+├── _resources/
+└── README.md
+```
+
+---
+
+# Congratulations!
+
+You have successfully:
+
+- Created your own GitHub repository
+- Cloned the UPES_PG_Template repository
+- Connected your local project to your personal GitHub repository
+- Made your first commit
+- Published your academic portfolio online
+
+This repository will serve as your personal academic workspace throughout your M.Tech programme.
