@@ -1,23 +1,137 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My PG Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vibhu Gautam | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>My PG Portfolio</h1>
-  <p>Name: Your Name</p>
-  <p>Program: M.Tech / PG</p>
+  <header class="hero">
+    <nav class="nav container">
+      <div class="brand">VG</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
 
-  <h2>Projects</h2>
-  <ul>
-    <li>Project 1: Description</li>
-    <li>Project 2: Description</li>
-  </ul>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <p class="eyebrow">GitHub Portfolio</p>
+        <h1>Hi, I'm Vibhu Gautam</h1>
+        <p class="lead">
+          I build and share learning-focused projects around Python programming,
+          Docker and containers, and data structures & algorithms.
+        </p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="https://github.com/vibhug0077" target="_blank" rel="noopener noreferrer">View GitHub Profile</a>
+          <a class="btn btn-secondary" href="#projects">Explore Projects</a>
+        </div>
+      </div>
 
-  <h2>Research</h2>
-  <p>Add research papers, reports, datasets, GitHub links.</p>
+      <div class="hero-card">
+        <h3>Quick Snapshot</h3>
+        <ul>
+          <li><strong>Name:</strong> Vibhu Gautam</li>
+          <li><strong>Focus:</strong> Python, Docker, DSA</li>
+          <li><strong>GitHub:</strong> @vibhug0077</li>
+          <li><strong>Portfolio Type:</strong> Static HTML + CSS</li>
+        </ul>
+      </div>
+    </div>
+  </header>
 
-  <script src="script.js"></script>
+  <main>
+    <section id="about" class="section container">
+      <div class="section-heading">
+        <p class="section-tag">About Me</p>
+        <h2>Developer portfolio based on my GitHub work</h2>
+      </div>
+      <p class="about-text">
+        This portfolio highlights selected repositories from my GitHub profile. It is designed as a clean,
+        responsive landing page that showcases my interest in practical programming, containerization,
+        and problem-solving.
+      </p>
+    </section>
+
+    <section id="projects" class="section container">
+      <div class="section-heading">
+        <p class="section-tag">Featured Repositories</p>
+        <h2>Projects I want to showcase</h2>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <img
+            src="https://images.unsplash.com/photo-1605745341112-85968b19335b?auto=format&fit=crop&w=1200&q=80"
+            alt="Docker and containers themed thumbnail"
+          />
+          <div class="project-content">
+            <span class="badge">Containers</span>
+            <h3>Docker & Containers</h3>
+            <p>
+              A repository focused on Docker fundamentals, container workflows, and hands-on learning.
+            </p>
+            <a href="https://github.com/vibhug0077/Docker_Containers" target="_blank" rel="noopener noreferrer">Open Repository</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img
+            src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80"
+            alt="Python programming themed thumbnail"
+          />
+          <div class="project-content">
+            <span class="badge">Python</span>
+            <h3>Python Programming</h3>
+            <p>
+              A learning repository for Python concepts, practice notebooks, and programming exercises.
+            </p>
+            <a href="https://github.com/vibhug0077/Python_Programing" target="_blank" rel="noopener noreferrer">Open Repository</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
+            alt="DSA and coding interview themed thumbnail"
+          />
+          <div class="project-content">
+            <span class="badge">DSA</span>
+            <h3>Data Structures & Algorithms</h3>
+            <p>
+              A problem-solving focused project section for algorithms, logic building, and coding practice.
+            </p>
+            <a href="https://github.com/vibhug0077/Problem_Solving" target="_blank" rel="noopener noreferrer">Open Repository</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container callout">
+      <div>
+        <p class="section-tag">Why this portfolio</p>
+        <h2>Simple, modern, and easy to host</h2>
+        <p>
+          You can directly upload these files to GitHub Pages, Netlify, Vercel, or any static hosting platform.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <div class="container footer-content">
+      <div>
+        <h3>Vibhu Gautam</h3>
+        <p>Python • Docker • DSA</p>
+      </div>
+      <a href="https://github.com/vibhug0077" target="_blank" rel="noopener noreferrer">github.com/vibhug0077</a>
+    </div>
+  </footer>
 </body>
 </html>
