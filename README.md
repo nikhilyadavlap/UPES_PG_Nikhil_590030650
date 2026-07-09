@@ -2,7 +2,7 @@
 
 # 🎓 UPES PG Starter Repository
 
-### *A Complete Academic Starter Kit for M.Tech & Postgraduate Students*
+### *A Complete Academic Starter Kit for MCA & Postgraduate Students*
 
 
 > Build • Learn • Research • Document • Showcase
